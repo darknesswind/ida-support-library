@@ -9,19 +9,19 @@
 // Define MATERIAL_DESIGN_STYLE for a "material design" inspired style
 
 #ifndef _LIB
-#ifndef MATERIAL_DESIGN_STYLE
-	#ifndef _DEBUG
-	#pragma comment(lib, "WaitBoxEx.LiB")
-	#else
-	#pragma comment(lib, "WaitBoxExD.LiB")
-	#endif
-#else
-	#ifndef _DEBUG
-	#pragma comment(lib, "WaitBoxExMd.LiB")
-	#else
-	#pragma comment(lib, "WaitBoxExMdD.LiB")
-	#endif
-#endif
+#	ifndef __X64__
+#		ifndef _DEBUG 
+#			pragma comment(lib, "WaitBoxExRelease32.LiB")
+#		else
+#			pragma comment(lib, "WaitBoxExDebug32.LiB")
+#		endif
+#	else
+#		ifndef _DEBUG
+#			pragma comment(lib, "WaitBoxExRelease64.LiB")
+#		else
+#			pragma comment(lib, "WaitBoxExDebug64.LiB")
+#		endif
+#	endif
 #endif
 
 namespace WaitBox

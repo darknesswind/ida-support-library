@@ -41,7 +41,7 @@ inline int getStringType(ea_t ea)
     if (get_opinfo(&oi, ea, 0, get_flags(ea)))
         return(oi.strtype);
     else
-        return(0);
+        return(STRTYPE_C);
 }
 
 
@@ -75,7 +75,7 @@ template <class T> inline void swap_t(T &a, T &b)
 }
 
 // ea_t zero padded hex number format
-#ifndef __EA64__
+#ifndef __X64__
 #define EAFORMAT "%08X"
 #else
 #define EAFORMAT "%016I64X"

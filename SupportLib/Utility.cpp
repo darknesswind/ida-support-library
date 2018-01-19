@@ -162,10 +162,8 @@ void trace(const char *format, ...)
 void getDisasmText(ea_t ea, qstring &s)
 {
     s.clear();
-    qstring buffer;
-    if (generate_disasm_line(&buffer, ea))
-        tag_remove(&buffer, buffer);
-    s = buffer;
+    if (generate_disasm_line(&s, ea))
+        tag_remove(&s);
 }
 
 // Return true if passed string is only hex digits

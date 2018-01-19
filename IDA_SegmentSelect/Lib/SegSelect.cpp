@@ -74,7 +74,7 @@ SegmentDialog::SegmentDialog(QWidget *parent, UINT flags, LPCSTR title, LPCSTR s
             if (len > biggestSize) biggestSize = len;
         }
 
-        #ifndef __EA64__
+        #ifndef __X64__
         if (++biggestStart > 8) biggestStart = 8;
         if (++biggestEnd > 8)   biggestEnd = 8;
         if (++biggestSize > 8)  biggestSize = 8;

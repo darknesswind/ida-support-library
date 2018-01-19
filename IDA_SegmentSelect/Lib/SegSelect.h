@@ -7,19 +7,19 @@
 #pragma once
 
 #ifndef _LIB
-#ifndef __EA64__
-#ifndef _DEBUG
-#pragma comment(lib, "SegSelect.LiB")
-#else
-#pragma comment(lib, "SegSelectD.LiB")
-#endif
-#else
-#ifndef _DEBUG
-#pragma comment(lib, "SegSelectEA64.LiB")
-#else
-#pragma comment(lib, "SegSelectEA64D.LiB")
-#endif
-#endif
+#	ifndef __X64__
+#		ifndef _DEBUG 
+#			pragma comment(lib, "SegSelectRelease32.LiB")
+#		else
+#			pragma comment(lib, "SegSelectDebug32.LiB")
+#		endif
+#	else
+#		ifndef _DEBUG
+#			pragma comment(lib, "SegSelectRelease64.LiB")
+#		else
+#			pragma comment(lib, "SegSelectDebug64.LiB")
+#		endif
+#	endif
 #endif
 
 namespace SegSelect

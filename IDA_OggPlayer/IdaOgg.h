@@ -8,11 +8,19 @@
 #pragma once
 
 #ifndef _LIB
-#ifndef _DEBUG
-#pragma comment(lib, "IdaOggPlayer.LiB")
-#else
-#pragma comment(lib, "IdaOggPlayerD.LiB")
-#endif
+#	ifndef __X64__
+#		ifndef _DEBUG 
+#			pragma comment(lib, "IdaOggPlayerRelease32.LiB")
+#		else
+#			pragma comment(lib, "IdaOggPlayerDebug32.LiB")
+#		endif
+#	else
+#		ifndef _DEBUG
+#			pragma comment(lib, "IdaOggPlayerRelease64.LiB")
+#		else
+#			pragma comment(lib, "IdaOggPlayerDebug64.LiB")
+#		endif
+#	endif
 #endif
 
 namespace OggPlay

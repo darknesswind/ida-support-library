@@ -7,3 +7,6 @@ MDS Release/
 DebugEA64/
 ReleaseEA64/
 *.db
+*.pdb
+*.user
+*.idb
