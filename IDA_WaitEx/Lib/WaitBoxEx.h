@@ -9,17 +9,17 @@
 // Define MATERIAL_DESIGN_STYLE for a "material design" inspired style
 
 #ifndef _LIB
-#	ifndef __X64__
+#	ifndef __EA64__
 #		ifndef _DEBUG 
-#			pragma comment(lib, "WaitBoxExRelease32.LiB")
+#			pragma comment(lib, "WaitBoxEx.LiB")
 #		else
-#			pragma comment(lib, "WaitBoxExDebug32.LiB")
+#			pragma comment(lib, "WaitBoxExd.LiB")
 #		endif
 #	else
 #		ifndef _DEBUG
-#			pragma comment(lib, "WaitBoxExRelease64.LiB")
+#			pragma comment(lib, "WaitBoxEx64.LiB")
 #		else
-#			pragma comment(lib, "WaitBoxExDebug64.LiB")
+#			pragma comment(lib, "WaitBoxExd64.LiB")
 #		endif
 #	endif
 #endif

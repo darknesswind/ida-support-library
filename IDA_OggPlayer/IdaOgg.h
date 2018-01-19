@@ -8,18 +8,10 @@
 #pragma once
 
 #ifndef _LIB
-#	ifndef __X64__
-#		ifndef _DEBUG 
-#			pragma comment(lib, "IdaOggPlayerRelease32.LiB")
-#		else
-#			pragma comment(lib, "IdaOggPlayerDebug32.LiB")
-#		endif
+#	ifndef _DEBUG 
+#		pragma comment(lib, "OggPlayer.LiB")
 #	else
-#		ifndef _DEBUG
-#			pragma comment(lib, "IdaOggPlayerRelease64.LiB")
-#		else
-#			pragma comment(lib, "IdaOggPlayerDebug64.LiB")
-#		endif
+#		pragma comment(lib, "OggPlayerd.LiB")
 #	endif
 #endif
 

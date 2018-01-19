@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <SURFIX Condition="'$(Configuration)'=='Debug'">d</SURFIX>
+    <SURFIX Condition="'$(Configuration)'=='Release'"></SURFIX>
+    <SURFIX Condition="'$(Configuration)'=='ReleaseEA64'">64</SURFIX>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile Condition="'$(Platform)'=='Win32'">
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='Debug'">_DEBUG;_WINDOWS;_LIB;__NT__;__IDP__;__VC__;NO_OBSOLETE_FUNCS;_CRT_SECURE_NO_WARNINGS;QT_NAMESPACE=QT;QT_NO_UNICODE_LITERAL</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='Release'">NDEBUG;QT_NO_DEBUG;_WINDOWS;_LIB;__NT__;__IDP__;__VC__;NO_OBSOLETE_FUNCS;_CRT_SECURE_NO_WARNINGS;QT_NAMESPACE=QT;QT_NO_UNICODE_LITERAL</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Condition="'$(Platform)'=='x64'">
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='Debug'">_DEBUG;__X64__;_WINDOWS;_LIB;__NT__;__IDP__;__VC__;NO_OBSOLETE_FUNCS;_CRT_SECURE_NO_WARNINGS;QT_NAMESPACE=QT;QT_NO_UNICODE_LITERAL</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='Release'">NDEBUG;QT_NO_DEBUG;__X64__;_WINDOWS;_LIB;__NT__;__IDP__;__VC__;NO_OBSOLETE_FUNCS;_CRT_SECURE_NO_WARNINGS;QT_NAMESPACE=QT;QT_NO_UNICODE_LITERAL</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='ReleaseEA64'">__EA64__;NDEBUG;QT_NO_DEBUG;__X64__;_WINDOWS;_LIB;__NT__;__IDP__;__VC__;NO_OBSOLETE_FUNCS;_CRT_SECURE_NO_WARNINGS;QT_NAMESPACE=QT;QT_NO_UNICODE_LITERAL</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="SURFIX">
+      <Value>$(SURFIX)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

@@ -75,7 +75,7 @@ template <class T> inline void swap_t(T &a, T &b)
 }
 
 // ea_t zero padded hex number format
-#ifndef __X64__
+#ifndef __EA64__
 #define EAFORMAT "%08X"
 #else
 #define EAFORMAT "%016I64X"

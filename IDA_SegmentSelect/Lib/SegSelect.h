@@ -7,17 +7,17 @@
 #pragma once
 
 #ifndef _LIB
-#	ifndef __X64__
+#	ifndef __EA64__
 #		ifndef _DEBUG 
-#			pragma comment(lib, "SegSelectRelease32.LiB")
+#			pragma comment(lib, "SegSelect.LiB")
 #		else
-#			pragma comment(lib, "SegSelectDebug32.LiB")
+#			pragma comment(lib, "SegSelectd.LiB")
 #		endif
 #	else
 #		ifndef _DEBUG
-#			pragma comment(lib, "SegSelectRelease64.LiB")
+#			pragma comment(lib, "SegSelect64.LiB")
 #		else
-#			pragma comment(lib, "SegSelectDebug64.LiB")
+#			pragma comment(lib, "SegSelectd64.LiB")
 #		endif
 #	endif
 #endif

@@ -12,7 +12,9 @@
 // IDA libs
 #define USE_DANGEROUS_FUNCTIONS
 #define USE_STANDARD_FILE_FUNCTIONS
+#ifndef NO_OBSOLETE_FUNCS
 #define NO_OBSOLETE_FUNCS
+#endif
 #include <ida.hpp>
 #pragma warning(push)
 #pragma warning(disable:4267) // "conversion from 'size_t' to 'xxx', possible loss of data"
